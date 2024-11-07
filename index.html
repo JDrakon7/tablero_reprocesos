@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plantilla Reprocesos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: #45a049;
+        }
+
+        /* Contenedor para centrar el input y el botón */
+        .input-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            height: 35px;
+            padding: 5px 10px;
+            border: 2px solid #4CAF50;
+            border-radius: 8px;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus {
+            border-color: #45a049;
+            box-shadow: 0 0 10px rgba(69, 160, 73, 0.3);
+        }
+
+        button {
+            height: 35px;
+            padding: 0 15px;
+            font-size: 16px;
+            color: white;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <h1>Plantilla de Producción</h1>
-    <iframe src="https://docs.google.com/spreadsheets/d/1fP1Wvtw1OM1zaXd9Yiw66qG4XA-52dvVYj5TVAEO1uk/edit?usp=sharing" width="100%" height="1200"></iframe>
+
+    <!-- Contenedor centrado para el input y el botón -->
+    <div class="input-container">
+        <label for="cellInput">Ingrese las celdas que desea imprimir:</label>
+        <input type="text" id="cellInput" placeholder="A1, B2, C3, D4">
+        <button id="printButton">Imprimir Celdas</button>
+    </div>
+
+    <div id="cell-content"></div>
+
+    <iframe src="https://docs.google.com/spreadsheets/d/1fP1Wvtw1OM1zaXd9Yiw66qG4XA-52dvVYj5TVAEO1uk/edit?usp=sharing"
+        width="100%" height="1000"></iframe>
+
+    <script src="script.js"></script>
 </body>
 </html>
