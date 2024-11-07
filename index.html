@@ -9,13 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-         /* Configuración de impresión */
-        @media print {
-            @page {
-                size: letter landscape; /* Tamaño carta en orientación horizontal */
-                margin: 5mm; /* Márgenes de 5mm */
-            }
-            
+         
         h1 {
             font-size: 24px;
             text-align: center;
@@ -65,6 +59,13 @@
         button:hover {
             background-color: #45a049;
         }
+
+          /* Configuración de impresión */
+        @media print {
+            @page {
+                size: letter landscape; /* Tamaño carta en orientación horizontal */
+                margin: 5mm; /* Márgenes de 5mm */
+            }
     </style>
 </head>
 <body>
